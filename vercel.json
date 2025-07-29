@@ -1,15 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "api/steam_free.py",
-      "use": "@vercel/python"
-    }
+    { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/steam/free",
-      "dest": "api/steam_free.py"
-    }
+    { "src": "/(.*)", "dest": "app.py" }
   ]
 }
