@@ -1,7 +1,15 @@
 {
-  "functions": {
-    "api/steam_free.py": {
-      "runtime": "python3.11"
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/steam_free.py",
+      "use": "@vercel/python"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/steam/free",
+      "dest": "api/steam_free.py"
+    }
+  ]
 }
